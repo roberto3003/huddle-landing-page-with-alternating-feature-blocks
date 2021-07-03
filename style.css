@@ -2,7 +2,7 @@
   --light: white;
   --dark: darkslategrey;
   --medium: darkcyan;
-  --accent: mediumblue;
+  --accent: fuchsia;
   --padding: 2rem;
   --font-size: calc(1rem + 0.5vw);
 }
@@ -34,6 +34,14 @@ footer {
 background-color: gainsboro;
 min-width: 100%;
 min-height: 25vh;
+}
+
+.bg-hero {   
+  width: 100vw;
+  background-image: url(./images/bg-hero-desktop.svg);
+  background-size: 100% 100%;
+  background-position: 0px auto;
+  background-repeat:no-repeat; height: 100%;
 }
 
 .links> *  > a {
@@ -73,7 +81,11 @@ section {
   width: 16em;
   display: grid;
   place-items: center;
-  background-color: var(--medium);
+  background-color: var(--accent);
+}
+
+.button a {
+  color: var(--light);
 }
 
 a {
