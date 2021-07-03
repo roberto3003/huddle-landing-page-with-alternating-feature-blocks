@@ -5,6 +5,8 @@
   --accent: fuchsia;
   --padding: 2rem;
   --font-size: calc(1rem + 0.5vw);
+	--shadow: 0 0.25vw 1vw  0 rgba(0,0,0,0.5);
+	--shadow-deep: 0 0.5vw 2vw  0 rgba(0,0,0,0.5);
 }
 
 html {
@@ -27,7 +29,6 @@ h1 {
 p {
   line-height: 1.5;
   max-width: 60ch;
-  margin: 0 auto calc(var(--padding)*2);
 }
 
 footer {
@@ -36,8 +37,11 @@ min-width: 100%;
 min-height: 25vh;
 }
 
+a {
+  text-decoration:none;
+}
+
 .bg-hero {   
-  width: 100vw;
   background-image: url(./images/bg-hero-desktop.svg);
   background-size: 100% 100%;
   background-position: 0px auto;
@@ -53,6 +57,15 @@ color: var(--dark);
   place-items: center;
 }
 
+  .shadow {
+	box-shadow: var(--shadow);
+  }
+
+.shadow:hover {
+	box-shadow: var(--shadow-deep);
+  }
+
+
 .flex {
   display: flex;
   gap: var(--padding);
@@ -63,11 +76,32 @@ color: var(--dark);
   flex-direction: column;
 }
 
+.two-col > * {
+  flex-grow: 1;
+  flex-basis: calc(( 20em - 100%) * 999);
+}
+
+.two-col > :nth-last-child(n+ 3),
+.two-col > :nth-last-child(n+ 3) ~ * {
+  flex-basis: 100%;
+}
+
+.two-col img {
+  min-width: 240px;
+  width: 100%;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
 
 .container {
   width: 80vw; 
   min-width: 320px;
-  padding: var(--padding) 0;
 }
 
 section {
@@ -84,13 +118,19 @@ section {
   background-color: var(--accent);
 }
 
-.button a {
-  color: var(--light);
+.header {
+  margin-block-start: var(--padding);
 }
 
-a {
-  color: var(--dark);
-  text-decoration:none;
+.header .button {
+  margin-inline-start: auto;
+  background-color: var(--light);
 }
 
+.card {
+  box-shadow: var(--shadow);
+}
 
+.card section {
+  padding: var(--padding);
+}
