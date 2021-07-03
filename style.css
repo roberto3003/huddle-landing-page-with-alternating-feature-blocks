@@ -41,6 +41,10 @@ a {
   text-decoration:none;
 }
 
+a:visited {
+  color: inherit;
+}
+
 .bg-hero {   
   background-image: url(./images/bg-hero-desktop.svg);
   background-size: 100% 100%;
@@ -111,11 +115,13 @@ section {
 
 .button {
   border-radius: var(--padding);
-  height: 2em;
-  width: 16em;
-  display: grid;
-  place-items: center;
+  display: inline;
+  padding: calc(var(--padding)/2);
   background-color: var(--accent);
+}
+
+.cta-button a{
+  color: var(--light);
 }
 
 .header {
@@ -127,10 +133,36 @@ section {
   background-color: var(--light);
 }
 
-.card {
+.card, .cta {
   box-shadow: var(--shadow);
 }
 
 .card section {
   padding: var(--padding);
+}
+
+.cta {
+  text-align: center;
+  background-color: var(--light);
+  height: 8em;
+}
+
+.wrapper2 {
+  padding: var(--padding);
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.wrapper2 section> * {
+  align-content: center;
+}
+
+.footer-end {
+  align-items: end;
+}
+
+.social img {
+  height: calc(var(--padding)*1.5);
+  width: auto;
+  min-width: initial;
 }
