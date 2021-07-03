@@ -1,0 +1,84 @@
+:root {
+  --light: white;
+  --dark: darkslategrey;
+  --medium: darkcyan;
+  --accent: mediumblue;
+  --padding: 2rem;
+  --font-size: calc(1rem + 0.5vw);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin:0;
+  color: var(--dark);
+  font-family: system-ui;
+  font-size: var(--font-size);
+  letter-spacing: 0.3em;
+} 
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  line-height: 1.5;
+  max-width: 60ch;
+  margin: 0 auto calc(var(--padding)*2);
+}
+
+footer {
+background-color: gainsboro;
+min-width: 100%;
+min-height: 25vh;
+}
+
+.links> *  > a {
+color: var(--dark);
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.flex {
+  display: flex;
+  gap: var(--padding);
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+
+.container {
+  width: 80vw; 
+  min-width: 320px;
+  padding: var(--padding) 0;
+}
+
+section {
+  justify-content: space-evenly;
+  margin-block-end: calc(var(--padding)*4);
+}
+
+.button {
+  border-radius: var(--padding);
+  height: 2em;
+  width: 16em;
+  display: grid;
+  place-items: center;
+  background-color: var(--medium);
+}
+
+a {
+  color: var(--dark);
+  text-decoration:none;
+}
+
+
